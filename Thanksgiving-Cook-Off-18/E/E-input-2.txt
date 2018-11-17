@@ -1,0 +1,10 @@
+7 2
+Alice is Bob's mother.
+Alice is Charlie's mother.
+Charlie is David's father.
+David is Ellen's father.
+Bob is Fred's father
+Georgia is Ellen's mother.
+Henry is Georgia's father.
+Ellen and Fred?
+Henry and Alice?

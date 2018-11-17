@@ -1,0 +1,9 @@
+5 3
+Alice is Bob's mother.
+Bob is Charlie's father.
+Alice is David's mother.
+David is Ellen's father.
+Peter is Raj's father.
+Bob and Alice?
+Charlie and Ellen?
+Raj and Ellen?
