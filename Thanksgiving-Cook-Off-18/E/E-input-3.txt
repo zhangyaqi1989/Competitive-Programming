@@ -1,9 +1,0 @@
-7 1
-Charlie is Fred's father.
-Alice is Bob's mother.
-Bob is Charlie's father.
-Charlie is David's father.
-Alice is Ellen's mother.
-Ellen is Fred's mother.
-Fred is Georgia's father.
-David and Georgia?

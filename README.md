@@ -1,2 +1,3 @@
 # Competitive-Programming
-This Repo contains all the coding contest I have attended
+This Repo contains the my own training of competitive programming
+and contests I attended.
