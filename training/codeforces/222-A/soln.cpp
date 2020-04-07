@@ -15,20 +15,23 @@ int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(0);
-    int n;
-    cin >> n;
+    int n, k;
+    cin >> n >> k;
     vector<int> nums;
     for(int i = 0; i < n; ++i) {
         int num;
         cin >> num;
         nums.push_back(num);
     }
-    ll ans = 0LL;
-    sort(nums.begin(), nums.end());
-    for(int i = 0; i < n; ++i) {
-        ans += abs(i + 1 - nums[i]);
+    bool valid = all_of(nums.begin() + k - 1, nums.end(), [&](int num) {return num == nums[k - 1];});
+    if(!valid) cout << -1 << endl;
+    else {
+        int idx = -1;
+        for(int i = 0; i < k; ++i) {
+            if(nums[i] != nums[k - 1]) idx = i;
+        }
+        cout << idx + 1 << endl;
     }
-    cout << ans << endl;
     return 0;
 }
 

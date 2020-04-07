@@ -10,6 +10,14 @@ typedef long long ll;
 
 using namespace std;
 
+vector<int> nums;
+
+void func(int x) {
+    if(x == 0) return;
+    func(x - 1);
+    swap(nums[x - 1], nums[x]);
+}
+
 
 int main()
 {
@@ -17,18 +25,18 @@ int main()
     cin.tie(0);
     int n;
     cin >> n;
-    vector<int> nums;
+    // implementation
+    for(int i = 0; i < n; ++i) nums.push_back(i);
+    func(n - 1);
+    vector<int> ans(n);
     for(int i = 0; i < n; ++i) {
-        int num;
-        cin >> num;
-        nums.push_back(num);
+        ans[nums[i]] = i + 1;
     }
-    ll ans = 0LL;
-    sort(nums.begin(), nums.end());
     for(int i = 0; i < n; ++i) {
-        ans += abs(i + 1 - nums[i]);
+        cout << ans[i] << " ";
     }
-    cout << ans << endl;
+    cout << endl;
+
     return 0;
 }
 
