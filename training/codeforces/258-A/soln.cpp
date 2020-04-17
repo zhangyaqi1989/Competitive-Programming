@@ -1,0 +1,62 @@
+/*
+ * written by Yaqi Zhang
+ * University of Wisconsin-Madison
+ * 2020
+ */
+
+#include<algorithm>
+#include<cstring>
+#include<iostream>
+#include<map>
+#include<queue>
+#include<set>
+#include<stdio.h>
+#include<vector>
+
+using namespace std;
+
+#define sim template < class c
+#define ris return * this
+#define dor > debug & operator <<
+#define eni(x) sim > typename \
+  enable_if<sizeof dud<c>(0) x 1, debug&>::type operator<<(c i) {
+sim > struct rge { c b, e; };
+sim > rge<c> range(c i, c j) { return rge<c>{i, j}; }
+sim > auto dud(c* x) -> decltype(cerr << *x, 0);
+sim > char dud(...);
+struct debug {
+#ifdef LOCAL
+~debug() { cerr << endl; }
+eni(!=) cerr << boolalpha << i; ris; }
+eni(==) ris << range(begin(i), end(i)); }
+sim, class b dor(pair < b, c > d) {
+  ris << "(" << d.first << ", " << d.second << ")";
+}
+sim dor(rge<c> d) {
+  *this << "[";
+  for (auto it = d.b; it != d.e; ++it)
+    *this << ", " + 2 * (it == d.b) << *it;
+  ris << "]";
+}
+#else
+sim dor(const c&) { ris; }
+#endif
+};
+#define imie(...) " [" << #__VA_ARGS__ ": " << (__VA_ARGS__) << "] "
+
+#define INF 0x3f3f3f3f
+
+
+
+int main(int argc, char *argv[])
+{
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+    string s;
+    cin >> s;
+    int idx = s.find('0');
+    if(idx == string::npos) cout << s.substr(1) << endl;
+    else cout << s.substr(0, idx) + s.substr(idx + 1) << endl;
+    return 0;
+}
+
